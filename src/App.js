@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+// import styles
+import './App.css'
+
+// Import components
+import Header from "./components/Header"
+import Landing from "./components/Landing"
+
+// data to send to header for isLoggedIn status
+const user = {
+  name: "Amelie Clerique",
+  isLoggedIn: false,
+}
+
+// Layout of components for App, send props to Header for loggedIn functionality
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header user={ user }/>
+      <Landing />
     </div>
   );
 }
 
-export default App;
+export default App
