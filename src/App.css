@@ -18,3 +18,8 @@ nav > * {
   text-decoration: none;
   color: grey;
 }
+
+nav > *:hover {
+  color: rgba(255, 209, 209, 1);
+  transition: 0.4s ease-out;
+}
